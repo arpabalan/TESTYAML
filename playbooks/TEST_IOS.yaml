@@ -3,6 +3,11 @@
   hosts: all
   gather_facts: false
   connection: network_cli
+  
+  collections:
+    - name: cisco.ios
+    - name: ansible.netcommon
+
   vars:
     network_os: ios
   tasks:
