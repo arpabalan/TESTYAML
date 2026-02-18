@@ -1,0 +1,16 @@
+---
+- name: Running show commands on cisco switche
+  hosts: all
+  gather_facts: false
+  connection: network_cli
+  vars:
+    network_os: ios
+  tasks:
+    - name: Run multiple show commands on cisco ios nodes
+      ios_command:
+        commands:
+          - show version | i Version
+      register: print_output
+
+    - debug: var=print_output.stdout_lines
+...
