@@ -1,6 +1,6 @@
 ---
 - name: Running show commands on cisco switche
-  hosts: all
+  hosts: 172.30.197.177
   gather_facts: false
   connection: network_cli
 
