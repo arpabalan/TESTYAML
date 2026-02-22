@@ -2,11 +2,7 @@
 - name: Running show commands on cisco switche
   hosts: 172.30.197.177
   gather_facts: false
-  connection: network_cli
 
-
-  vars:
-    network_os: ios
   tasks:
     - name: Run multiple show commands on cisco ios nodes
       cisco.ios.ios_command:
