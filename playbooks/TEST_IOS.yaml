@@ -5,7 +5,7 @@
 
   tasks:
     - name: Run multiple show commands on cisco ios nodes
-      cisco.ios.ios_command:
+      ios_command:
         commands:
           - show version | i Version
       register: print_output
